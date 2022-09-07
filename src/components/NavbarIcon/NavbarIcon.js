@@ -8,7 +8,9 @@ const StyledNavbarIcon = styled.div`
 const StyledIcon = styled.img`
   height: 100%;
   width: 100%;
+  object-fit: cover;
   border-radius: 50%;
+
   transition: 0.3s ease;
   :hover {
     border-radius: 15px;

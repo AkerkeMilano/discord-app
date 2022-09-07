@@ -10,6 +10,7 @@ const StyledCategoryTitle = styled.div`
   text-transform: uppercase;
   font-size: 0.9em;
   padding: 10px;
+  transition: 0.3s ease;
   > svg {
     position: absolute;
     left: 4px;

@@ -12,6 +12,7 @@ const StyledChannelblock = styled.div`
     font-weight: 600;
     font-size: 0.88em;
     margin-left: 12px;
+    transition: 0.3s ease;
     :hover {
         background: #42464d;
         color: #efeef0;
