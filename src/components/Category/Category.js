@@ -38,7 +38,7 @@ const Category = ({ category }) => {
         <StyledTitle>{category.title}</StyledTitle>
       </StyledCategoryTitle>
       {category.channels.map((channel) => (
-          <Channel channel={channel} isClicked={isClicked} />
+          <Channel key={channel.id} channel={channel} isClicked={isClicked} categoryId={category.id}/>
         ))}
     </div>
   );
