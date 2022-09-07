@@ -6,7 +6,24 @@ export const mock = [
         {
             id: 1,
             name: "English",
-            img: british_flag
+            img: british_flag,
+            categories: [
+                {
+                    id: 11,
+                    title: "General",
+                    channels: ["welcome", "introduce-yourself", "media", "discussions"]
+                },
+                {
+                    id: 12,
+                    title: "English Learning",
+                    channels: ["about-english", "grammar", "proof-reading", "resources"]
+                }, 
+                {
+                    id: 13,
+                    title: "English practice",
+                    channels: ["beginner-practice", "intermediate-practice", "advanced-practice"]
+                }
+            ]
         },
         {
             id: 2,
