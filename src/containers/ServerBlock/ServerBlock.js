@@ -11,11 +11,16 @@ const StyledServerBlock = styled.div`
   color: #868e95;
   background: #2f3136;
   font-size: 0.8em;
+  flex: 1 1 auto;
+  min-height: 100%;
 `;
 
 const StyledServerHeader = styled.div`
+  height: 50px;
   color: #efeef0;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   font-weight: 600;
   border-bottom: 2px solid #202225;
 `;

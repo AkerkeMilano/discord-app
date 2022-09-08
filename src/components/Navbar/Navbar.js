@@ -3,11 +3,14 @@ import { mock } from "../../data";
 import styled from "styled-components";
 import { ServerContext } from "../../context/ServerContext";
 import { useContext } from "react";
+import avatarIcon from "../../img/icons8-discord.svg";
+import { ChannelContext } from "../../context/ChannelContext";
 
 const StyledNavbar = styled.div`
   width: 70px;
   background: #202225;
-  height: 100vh;
+  min-height: 100%;
+  flex: 1 1 auto;
 `;
 
 const StyledLine = styled.div`
@@ -32,14 +35,13 @@ const StyledAddIcon = styled.div`
   width: 50px;
   display: inline-block;
   background-color: #535559;
-  color: white;
   font-size: 30px;
   line-height: 50px;
   text-align: center;
   margin-left: 10px;
   border-radius: 50%;
   color: #2e8b57;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   ::before {
     content: "+";
   }
@@ -48,18 +50,60 @@ const StyledAddIcon = styled.div`
     background-color: #2e8b57;
     border-radius: 15px;
   }
+  :active {
+    transform: scale(0.9);
+  }
+`;
+
+const StyledHomeIcon = styled.div`
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-color: #535559;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: #2e8b57;
+  transition: 0.3s ease;
+  :hover {
+    border-radius: 15px;
+  :active {
+      transform: scale(0.9);
+    }
+  }
+`;
+
+const StyledAvatarImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 `;
 
 const Navbar = () => {
   const { serverId, setServerId } = useContext(ServerContext);
+  const {channelData, setChannelData} = useContext(ChannelContext);
+
   const handleClick = (id) => {
     setServerId(id);
+    setChannelData(mock[id-1].categories[0].channels[0])
   };
   return (
     <StyledNavbar>
+      <div style={{ padding: "5px 0" }}>
+        <StyledHomeIcon>
+          <StyledAvatarImg src={avatarIcon} alt="Avatar img" />
+        </StyledHomeIcon>
+      </div>
       {mock.map((server_example) => (
-        <StyledIconWrapper key={server_example.id} onClick={() => handleClick(server_example.id)}>
-          <StyledLine isClicked={serverId===server_example.id}/> <NavbarIcon icon={server_example} isClicked={serverId===server_example.id}/>
+        <StyledIconWrapper
+          key={server_example.id}
+          onClick={() => handleClick(server_example.id)}
+        >
+          <StyledLine isClicked={serverId === server_example.id} />{" "}
+          <NavbarIcon
+            icon={server_example}
+            isClicked={serverId === server_example.id}
+          />
         </StyledIconWrapper>
       ))}
       <div style={{ padding: "5px 0" }}>

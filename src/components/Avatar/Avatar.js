@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledAvatar = styled.div`
-    width: 40px;
-    height: 40px;
+    width: ${(props) => (props.width ? props.width : "40px")};
+    height: ${(props) => (props.height ? props.height : "40px")};
 `;
 
 const StyledAvatarImg = styled.img`
@@ -12,9 +12,9 @@ const StyledAvatarImg = styled.img`
     border-radius: 50%;
 `;
 
-const Avatar = ({image}) => {
+const Avatar = ({image, width, height}) => {
     return (
-        <StyledAvatar>
+        <StyledAvatar width={width} height={height}>
             <StyledAvatarImg src={image} alt="User avatar"/>
         </StyledAvatar>
     )

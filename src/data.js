@@ -185,12 +185,110 @@ export const mock = [
   },
   {
     id: 2,
-    name: "Anime",
+    name: "Anime Soul",
     img: anime_img,
+    categories: [
+      {
+        id: 21,
+        title: "All anime",
+        channels: [
+          {
+            id: 211,
+            title: "anime-list",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 212,
+            title: "manga",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 213,
+            title: "attack-on-titan",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 214,
+            title: "discussions",
+            messages: generateMessageWithAuthor(10)
+          }
+        ],
+      },
+      {
+        id: 22,
+        title: "Events",
+        channels: [
+            {
+              id: 221,
+              title: "event-announcement",
+              messages: generateMessageWithAuthor(8)
+            },
+            {
+              id: 222,
+              title: "event-text",
+              messages: generateMessageWithAuthor(5)
+            },
+            {
+              id: 223,
+              title: "music",
+              messages: generateMessageWithAuthor(5)
+            },
+          ],
+      },
+    ],
   },
   {
     id: 3,
     name: "Music",
     img: music_img,
+    categories: [
+      {
+        id: 31,
+        title: "Rules",
+        channels: [
+          {
+            id: 311,
+            title: "rules",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 312,
+            title: "questions",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 313,
+            title: "media",
+            messages: generateMessageWithAuthor(10)
+          },
+          {
+            id: 314,
+            title: "discussions",
+            messages: generateMessageWithAuthor(10)
+          }
+        ],
+      },
+      {
+        id: 32,
+        title: "Multimedia",
+        channels: [
+            {
+              id: 321,
+              title: "events",
+              messages: generateMessageWithAuthor(8)
+            },
+            {
+              id: 322,
+              title: "concerts",
+              messages: generateMessageWithAuthor(5)
+            },
+            {
+              id: 323,
+              title: "master-classes",
+              messages: generateMessageWithAuthor(5)
+            },
+          ],
+      },
+    ],
   },
 ];
