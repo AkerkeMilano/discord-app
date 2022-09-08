@@ -14,7 +14,7 @@ const lorem = new LoremIpsum({
   },
 });
 
-const users = [
+export const users = [
     {
         id: 1,
         name: lorem.generateWords(2).replace( /\s/g, ''),
@@ -96,7 +96,7 @@ const generateMessageWithAuthor = (messages_num) => {
     let messageList = [];
     let n = 0;
     while(n < messages_num){
-        const message = lorem.generateSentences(3);
+        const message = lorem.generateSentences(1);
         messageList.push({user: users[Math.floor(Math.random() * 10)], message: message, datetime: convertTime2Date(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))});
         n++;
     }
@@ -115,22 +115,22 @@ export const mock = [
           {
             id: 111,
             title: "welcome",
-            messages: generateMessageWithAuthor(5)
+            messages: generateMessageWithAuthor(10)
           },
           {
             id: 112,
             title: "introduce-yourself",
-            messages: generateMessageWithAuthor(5)
+            messages: generateMessageWithAuthor(10)
           },
           {
             id: 113,
             title: "media",
-            messages: generateMessageWithAuthor(5)
+            messages: generateMessageWithAuthor(10)
           },
           {
             id: 114,
             title: "discussions",
-            messages: generateMessageWithAuthor(5)
+            messages: generateMessageWithAuthor(10)
           }
         ],
       },
@@ -141,7 +141,7 @@ export const mock = [
             {
               id: 121,
               title: "about-english",
-              messages: generateMessageWithAuthor(5)
+              messages: generateMessageWithAuthor(8)
             },
             {
               id: 122,

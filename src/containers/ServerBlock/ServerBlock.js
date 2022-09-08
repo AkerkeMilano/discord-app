@@ -7,7 +7,7 @@ import { mock } from "../../data";
 
 const StyledServerBlock = styled.div`
   position: relative;
-  width: 240px;
+  width: 15.625vw;
   color: #868e95;
   background: #2f3136;
   font-size: 0.8em;

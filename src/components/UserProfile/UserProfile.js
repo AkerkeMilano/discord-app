@@ -19,7 +19,7 @@ const StyledUserProfile = styled.div`
   gap: 10px;
   align-items: center;
   background: #292b2f;
-  padding: 5px;
+  padding: 5px 10px;
   position: absolute;
   bottom: 0;
 `;
