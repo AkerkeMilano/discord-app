@@ -16,6 +16,7 @@ const StyledChannelblock = styled.div`
     font-size: 0.88em;
     margin-left: 12px;
     transition: 0.3s ease;
+    color: ${props => (props.isHighlighted ? "#efeef0" : "")};
     :hover {
         background: #42464d;
         color: #efeef0;
@@ -23,20 +24,17 @@ const StyledChannelblock = styled.div`
     }
 `;
 
-const StyledChannelTitle = styled.div`
-
-`;
-
 const Channel = ({channel, isClicked, categoryId}) => {
-    const {setChannelData} = useContext(ChannelContext);
+    const {channelData, setChannelData} = useContext(ChannelContext);
     const {serverId} = useContext(ServerContext);
+    console.log(channelData);
     const handleClick = (id) => {
           setChannelData(mock[serverId-1].categories.filter(category => category.id === categoryId)[0].channels.filter(channel => channel.id === id)[0]);
     }
     return !isClicked ? (
-        <StyledChannelblock onClick={() => handleClick(channel.id)}>
+        <StyledChannelblock onClick={() => handleClick(channel.id)} isHighlighted = {channel.id === channelData.id}>
             <HashtagIcon />
-            <StyledChannelTitle>{channel.title.length > 22 ? channel.title.substring(0, 20)+"..." : channel.title}</StyledChannelTitle>
+            <div>{channel.title.length > 22 ? channel.title.substring(0, 20)+"..." : channel.title}</div>
         </StyledChannelblock>
     ) : "";
 };

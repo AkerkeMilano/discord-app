@@ -7,10 +7,9 @@ import avatarIcon from "../../img/icons8-discord.svg";
 import { ChannelContext } from "../../context/ChannelContext";
 
 const StyledNavbar = styled.div`
-  width: 70px;
+  width: 6vw;
   background: #202225;
-  min-height: 100%;
-  flex: 1 1 auto;
+  height: 100vh;
 `;
 
 const StyledLine = styled.div`
@@ -81,7 +80,7 @@ const StyledAvatarImg = styled.img`
 
 const Navbar = () => {
   const { serverId, setServerId } = useContext(ServerContext);
-  const {channelData, setChannelData} = useContext(ChannelContext);
+  const {setChannelData} = useContext(ChannelContext);
 
   const handleClick = (id) => {
     setServerId(id);

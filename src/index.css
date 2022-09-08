@@ -3,6 +3,7 @@ body {
   font-family: Catamaran,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 20px;
   height: 100%;
+  box-sizing: border-box;
 }
 
 code {

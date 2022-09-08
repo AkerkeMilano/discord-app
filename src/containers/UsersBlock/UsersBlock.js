@@ -6,7 +6,7 @@ const calmColor = ["#B9D2D6", "#CCB9D6", "#D6BDB9", "#C4D6B9"];
 
 const StyledUsersBlock = styled.div`
   background: #2f3136;
-  grid-area: users;
+  flex-grow: 1;
 `;
 
 const StyledUserHeader = styled.div`

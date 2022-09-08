@@ -8,7 +8,7 @@ import UsersBlock from "../UsersBlock/UsersBlock";
 const StyledChatBlock = styled.div`
   position: relative;
   width: 60vw;
-  height: 100%;
+  overflow: auto;
   background: #36393f;
   padding: 20px;
 `;
@@ -33,17 +33,14 @@ const StyledInputField = styled.div`
 const StyledChatUsersBlock = styled.div`
   display: flex;
   height: 100%;
-  grid-area: chat;
 `;
 
 const StyledInformationBlock = styled.div`
   background: "#42464d";
-  display: grid;
-  row-gap: 0;
-  grid-template-areas:
-  'header header header'
-  'chat chat users';
-  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
 `;
 
 const ChatBlock = () => {

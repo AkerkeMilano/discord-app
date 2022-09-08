@@ -7,12 +7,11 @@ import { mock } from "../../data";
 
 const StyledServerBlock = styled.div`
   position: relative;
-  width: 15.625vw;
+  width: 20vw;
   color: #868e95;
   background: #2f3136;
   font-size: 0.8em;
-  flex: 1 1 auto;
-  min-height: 100%;
+  height: 100vh;
 `;
 
 const StyledServerHeader = styled.div`
@@ -22,7 +21,6 @@ const StyledServerHeader = styled.div`
   align-items: center;
   padding-left: 20px;
   font-weight: 600;
-  border-bottom: 2px solid #202225;
 `;
 const ServerBlock = () => {
   const { serverId } = useContext(ServerContext);
